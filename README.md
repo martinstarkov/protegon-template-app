@@ -4,7 +4,7 @@ Inside of `CMakeLists.txt`, change `project(protegon-template-app)` to whatever 
 
 # Build Instructions
 
-0. Clone this repository such that the [protegon engine repository](https://emscripten.org/) is cloned in the same repository, i.e:
+0. Clone this repository such that the [protegon engine repository](https://emscripten.org/) is cloned in the same directory as this repository, i.e:
 - /Dev/protegon
 - /Dev/your_project_name
 1. `mkdir build` inside of this repository to create a build directory.
