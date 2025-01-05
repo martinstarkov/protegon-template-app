@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(protegon-template-app)
+project(protegon-chemulink)
 
 set(PROTEGON_TESTS OFF CACHE BOOL "")
 
