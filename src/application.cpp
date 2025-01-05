@@ -55,10 +55,11 @@ public:
 			Rect r{ V2_int{ p.x * tile_size.x, p.y * tile_size.y }, tile_size, Origin::TopLeft };
 			if (grid.Has(p)) {
 				switch (grid.Get(p)) {
-					case 0: r.Draw(color::Gray, -1.0f); break;
-					case 1: grass.Draw(r); break;
+					case 0: c = color::Gray; break;
+					case 1: c = color::Orange; break;
 				}
 			}
+			grass.Draw(r, c);
 		});
 		if (grid.Has(mouse_tile)) {
 			mouse_box.Draw(color::Yellow);
@@ -69,7 +70,10 @@ public:
 };
 
 int main([[maybe_unused]] int c, [[maybe_unused]] char** v) {
-	game.Init("paint: left click to draw; right click to erase; B to flip color", { 720, 720 });
+	game.Init(
+		"paint: left click to draw; right click to erase; B to flip color", { 720, 720 },
+		color::Transparent
+	);
 	game.scene.LoadActive<Paint>("paint");
 	return 0;
 }
